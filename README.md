@@ -9,6 +9,27 @@ This project was made using Python, Flask, and Docker. Read later sections for u
 
 ![picture 0](https://i.imgur.com/H9QD9c8.png)  
 
+
+Contoh input utk post: 
+```json
+{
+  "name": "Pikachu",
+  "type": ["Electric"],
+  "abilities": ["Static", "Lightning Rod"],
+  "stats": {
+    "hp": 35, "attack": 55, "defense": 40,
+    "specialAttack": 50, "specialDefense": 50, "speed": 90
+  },
+  "moves": ["Thunder Shock", "Volt Tackle"],
+  "evolution": { "evolvesFrom": "Pichu", "evolvesTo": "Raichu" },
+  "description": "This mouse-like Pokémon stores electricity in its cheek pouches."
+}
+```
+
+```text
+http://127.0.0.1:5000/pokemon
+```
+
 ## How to Run
 Run Docker:
 ```bash
