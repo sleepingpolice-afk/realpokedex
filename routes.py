@@ -56,3 +56,5 @@ def search_pokemon():
 
     results = mongo.db.pokemon.find(query)
     return Response(json_util.dumps(results), mimetype='application/json')
+
+
