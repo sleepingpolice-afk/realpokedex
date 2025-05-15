@@ -3,6 +3,6 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile.railway"
 
 [deploy]
-healthcheckPath = "/ping"
+healthcheckPath = "/pokemon/ping"
 restartPolicyMaxRetries = 10
 restartPolicyType = "ON_FAILURE"

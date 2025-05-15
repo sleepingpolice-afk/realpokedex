@@ -5,6 +5,9 @@ from models import is_valid_pokemon
 
 pokemon_bp = Blueprint('pokemon', __name__)
 
+@pokemon_bp.route('/ping', methods=['GET'])
+def ping():
+    return "OK", 200
 
 @pokemon_bp.route('/pokemon', methods=['POST'])
 def create_pokemon():
