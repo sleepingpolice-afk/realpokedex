@@ -31,11 +31,11 @@ export default function Statistic() {
     }, []);
 
     const countByType = pokemonData.reduce((acc, curr) => {
-        // Assuming the first type in the array is the primary type for statistics
-        const primaryType = curr.type[0]; 
-        if (primaryType) {
-            acc[primaryType] = (acc[primaryType] || 0) + 1;
-        }
+        curr.type.forEach(typeStr => {
+            if (typeStr) {
+                acc[typeStr] = (acc[typeStr] || 0) + 1;
+            }
+        });
         return acc;
     }, {} as Record<string, number>);
 
