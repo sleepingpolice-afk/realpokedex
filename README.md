@@ -100,7 +100,7 @@ Contoh output pada salah satu metode get pokemon:
 ### Pokemon Statistics
 ![picture 4](https://i.imgur.com/pAahGPQ.png)  
 
-> Keep in mind that the Chart is **scalable**. Whenever we add a pokemon in the Inventory page, its type will be added to this chart. If the type is a new type, then create a new "stick" or class interval will be added.
+> Keep in mind that the Chart is **scalable**. Whenever we add a pokemon in the Inventory page, its type will be added to this chart. If the type is a new type, then create a new "stick" or class interval.
 
 
 ## Credits
