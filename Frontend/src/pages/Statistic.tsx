@@ -78,7 +78,7 @@ export default function Statistic() {
             <div className="mb-8 mt-6">
             <h1 className="text-3xl font-bold text-gray-900">Pokemon Collection Statistics</h1>
             <p className="mt-2 text-gray-600">
-                Explore statistics about your Pokémon collection.
+                Bersama Mas Joko Mencari Pokemon Bertelur
             </p>
             </div>
 
