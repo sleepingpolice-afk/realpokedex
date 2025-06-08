@@ -10,9 +10,7 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const { isAuthenticated, isLoading } = useAuth();
 
   if (isLoading) {
-    // You might want to show a loading spinner here instead of null
-    // For example: return <p>Loading authentication...</p>;
-    return null; // Or a loading component
+    return null;
   }
 
   if (!isAuthenticated) {

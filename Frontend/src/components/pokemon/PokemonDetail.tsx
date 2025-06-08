@@ -14,10 +14,8 @@ const PokemonDetail: React.FC<PokemonDetailProps> = ({
   species,
   evolutionChain,
 }) => {
-  // Format the ID to have leading zeros
   const formattedId = `#${String(pokemon.id).padStart(3, '0')}`;
   
-  // Get pokemon types
   const types = pokemon.types.map(typeInfo => typeInfo.type.name);
   
   // Get the primary type color

@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    container_name: pokedex-backend-container
+    environment:
+      - FLASK_ENV=development
+      - MONGO_URI=mongodb+srv://wesley:OxvN1V3BTnrCOLvS@wesley.m99c9ig.mongodb.net/kelompoksbd?retryWrites=true&w=majority&appName=Wesley
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: pokedex-frontend-container
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000

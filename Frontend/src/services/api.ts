@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: 'http://127.0.0.1:5000', // Your Flask backend URL
+  baseURL: 'http://localhost:5000/', // Your Flask backend URL
   headers: {
     'Content-Type': 'application/json',
   },
@@ -14,15 +14,9 @@ apiClient.interceptors.request.use(
     if (storedUser) {
       try {
         const user = JSON.parse(storedUser);
-        // IMPORTANT: Adjust this if your login response/user object stores the token differently
-        // For example, if your backend sends a token directly upon login,
-        // and you store it as `user.token`
         if (user && user.token) { 
           config.headers.Authorization = `Bearer ${user.token}`;
         }
-        // If your backend doesn't use Bearer tokens but expects user_id or email in headers
-        // for authenticated requests to /pokemon, you might need to adjust this.
-        // For now, assuming JWT Bearer token.
       } catch (e) {
         console.error("Could not parse user from localStorage or attach token", e);
       }
