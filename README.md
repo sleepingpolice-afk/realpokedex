@@ -22,9 +22,7 @@ Referensi:
 [National Pokedex](https://pokemondb.net/pokedex/all)
 
 ## What this Project Does
-Proyek ini terinspirasi dari konsep National Pokedex pada series Pokemon yang bertujuan untuk mencatat keseluruhan data dari seluruh Pokemon yang ada. Proyek kami merupakan sebuah aplikasi yang mensimulasikan fungsi dari National Pokedex pada series Pokemon untuk mencatat data Pokemon mulai dari nama spesies, tipe, abilities, statistik (atk, def, hp, spatk, spadef, speed), moves, evolution-line, dan deskripsi singkat. Untuk memudahkan setiap penggunanya, proyek ini memiliki sistem login dan bersifat customizable. Customizable Pokedex yang kami buat juga memiliki bagian Inventory yang mencatat Pokemon yang dimiliki pengguna saat ini. Dengan Pokedex customizable, pengguna dapat meng-input sendiri Pokemon mereka dan me-registernya ke MongoDB melalui bagian Inventory yang terdapat pada proyek kami. 
-
-> Atas saran dari Pak Yan Maraden, kami juga telah menambahkan sebuah grafik untuk menunjukkan statistik pokemon, seperti gambar chart yang menunjukkan jumlah pokemon di setiap tipenya, dan stats yang mereka miliki.
+Proyek ini terinspirasi dari konsep National Pokedex pada series Pokemon yang bertujuan untuk mencatat keseluruhan data dari seluruh Pokemon yang ada. Proyek kami merupakan sebuah aplikasi yang mensimulasikan fungsi dari National Pokedex pada series Pokemon untuk mencatat data Pokemon mulai dari nama spesies, tipe, abilities, statistik (atk, def, hp, spatk, spadef, speed), moves, evolution-line, dan deskripsi singkat. Aplikasi ini akan menampilkan data dari semua Pokemon yang tersedia secara berurutan berdasarkan nomor index Pokemonnya dan statistiknya untuk masing-masing Pokemonnya. Untuk memudahkan setiap penggunanya, proyek ini memiliki sistem login dan bersifat customizable. Customizable Pokedex yang kami buat juga memiliki bagian Inventory yang mencatat Pokemon yang dimiliki pengguna saat ini. Dengan Pokedex customizable, pengguna dapat meng-input sendiri Pokemon mereka dan me-registernya ke MongoDB melalui bagian Inventory yang terdapat pada proyek kami. Selain itu, aplikasi juga dapat menampilkan sebuah grafik untuk menunjukkan statistik pokemon, seperti gambar chart yang menunjukkan jumlah pokemon di setiap tipenya, dan stats yang mereka miliki.
 
 ## Tech Stack
 #### Frontend
@@ -119,4 +117,4 @@ Contoh output pada salah satu metode get pokemon:
 This project was made by:
 - Bonifasius Raditya Pandu Hendrianto (2306242350): Project setup, frontend development.
 - Jonathan Frederick Kosasih (2306225981): Concept, description, frontend finishing and dockerizing.
-- Wesley Frederick Oh (2306202763): Backend development and dockerizing, FE & BE integration, README
+- Wesley Frederick Oh (2306202763): Backend development and dockerizing, FE & BE integration, README.
