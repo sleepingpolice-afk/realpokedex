@@ -115,6 +115,6 @@ Contoh output pada salah satu metode get pokemon:
 
 ## Credits
 This project was made by:
-- Bonifasius Raditya Pandu Hendrianto (2306242350): Project setup, frontend development.
-- Jonathan Frederick Kosasih (2306225981): Concept, description, frontend finishing and dockerizing.
-- Wesley Frederick Oh (2306202763): Backend development and dockerizing, FE & BE integration, README.
+- Bonifasius Raditya Pandu Hendrianto (2306242350)
+- Jonathan Frederick Kosasih (2306225981)
+- Wesley Frederick Oh (2306202763)
