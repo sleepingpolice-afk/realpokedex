@@ -1,3 +1,8 @@
+### Meet The Team
+- Bonifasius Raditya Pandu Hendrianto (2306242350) - Frontend
+- Jonathan Frederick Kosasih (2306225981) - Dockerized
+- Wesley Frederick Oh (2306202763) - Backend + Integrate
+
 # Customizable Pokedex
 Sebelum membahas Pokedex, lebih baik jika kita mengenal Pokemon terlebih dahulu.
 
