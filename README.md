@@ -4,12 +4,20 @@ Sebelum membahas Pokedex, lebih baik jika kita mengenal Pokemon terlebih dahulu.
 ## What is Pokemon?
 Pokemon adalah kependekan dari Pocket Monsters, sebuah franchise global milik The Pokemon Company yang pertama kali diperkenalkan di Jepang pada Februari 1996 sebagai judul permainan video untuk konsol portabel Nintendo, Game Boy, yaitu "Pokemon Red" dan "Pokemon Green".
 
-Selain judul franchise game, istilah Pokemon juga merujuk pada spesies fiksi Pokemon. Dalam konteks ini, Pokemon adalah makhluk makhluk misterius dengan banyak rahasia. Beberapa Pokémon tinggal bersama manusia dan beberapa tinggal di alam bebas di padang rumput, gua, atau laut, tapi banyak hal tentang ekologi mereka yang masih belum diketahui. Salah satu fitur utama mereka adalah bahwa mereka dapat ditangkap menggunakan Poke Ball, yang memungkinkan mereka dibawa-bawa.
+Selain judul franchise game, istilah Pokemon juga merujuk pada spesies fiksi Pokemon. Dalam konteks ini, Pokemon adalah makhluk-makhluk misterius dengan banyak rahasia. Beberapa Pokémon tinggal bersama manusia dan beberapa tinggal di alam bebas di padang rumput, gua, atau laut, tapi banyak hal tentang ekologi mereka yang masih belum diketahui. Salah satu fitur utama mereka adalah bahwa mereka dapat ditangkap menggunakan Poke Ball, yang memungkinkan mereka dibawa-bawa.
 
-[Referensi](https://id.portal-pokemon.com/about/)
+## What is a Pokedex?
+Pada film dan game Pokemon, terdapat sebuah benda yang diberikan kepada pemain yang disebut Pokedex. Pokedex adalah sebuah ensiklopedia portable berteknologi tinggi yang digunakan sebagai alat oleh para Pokemon trainer untuk mencatat data dari berbagai spesies Pokemon yang mereka temui dan tangkap selama perjalanan mereka. Alat ini dapat mengidentifikasi Pokemon dan menampilkan seluruh informasi mereka seperti deskripsi, statistik fisik (tinggi, berat), statistik pertandingan (attack, defense, hp, speed, etc.), dan informasi lainnya seperti rantai evolusinya. Dalam alur ceritanya, para Pokemon trainer ditugaskan oleh professornya untuk melengkapi data Pokemon pada Pokedex yang diberikan untuk membantu penelitiannya mengenai Pokemon. 
+
+Setiap game Pokemon memiliki Pokedex yang berbeda karena setiap game hanya memiliki sekitar 300-400 Pokemon yang bisa ditangkap pada game tersebut. Pokedex ini disebut sebagai Regional Pokedex. Seiring dengan bertambahnya Pokemon baru melalui game terbarunya, jumlah Pokemon secara keseluruhan juga bertambah, sehingga terdapat juga Pokedex yang mencatat seluruh Pokemon yang terdapat pada semua gamenya yang disebut sebagai National Pokedex. Untuk saat ini, terdapat sebanyak 1025 total Pokemon dari 9 generasi dengan berbagai rupanya (sebelum rilisnya Pokemon Legends: Z-A). 
+
+Referensi:
+[Pokemon](https://id.portal-pokemon.com/about/)
+[Pokedex](https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex)
+[National Pokedex](https://pokemondb.net/pokedex/all)
 
 ## What this Project Does
-With the Customized Pokedex, the user will be able to input their own pokemon and register it to MongoDB.
+Proyek ini terinspirasi dari konsep National Pokedex pada series Pokemon yang bertujuan untuk mencatat keseluruhan data dari seluruh Pokemon yang ada. Proyek kami merupakan sebuah aplikasi yang mensimulasikan fungsi dari National Pokedex pada series Pokemon untuk mencatat data Pokemon mulai dari nama spesies, tipe, abilities, statistik (atk, def, hp, spatk, spadef, speed), moves, evolution-line, dan deskripsi singkat. Untuk memudahkan setiap penggunanya, proyek ini memiliki sistem login dan bersifat customizable. Customizable Pokedex yang kami buat juga memiliki bagian Inventory yang mencatat Pokemon yang dimiliki pengguna saat ini. Dengan Pokedex customizable, pengguna dapat meng-input sendiri Pokemon mereka dan me-registernya ke MongoDB melalui bagian Inventory yang terdapat pada proyek kami. 
 
 > Atas saran dari Pak Yan Maraden, kami juga telah menambahkan sebuah grafik untuk menunjukkan statistik pokemon, seperti gambar chart yang menunjukkan jumlah pokemon di setiap tipenya, dan stats yang mereka miliki.
 
@@ -27,7 +35,7 @@ With the Customized Pokedex, the user will be able to input their own pokemon an
 - MongoDB as NoSQL Database
 
 ## Dockerization
-Run the application in root folder with these commands:
+Jalankan aplikasi pada root folder dengan menggunakan command berikut:
 
 ```bash
 git clone https://github.com/sleepingpolice-afk/realpokedex.git
@@ -38,7 +46,7 @@ docker-compose build
 docker-compose up
 ```
 
-or you can run both services individually inside their respective folders, such as:
+atau Anda juga dapat menjalankan bagian frontend dan backend secara terpisah pada folder mereka masing-masing, seperti: 
 ```bash
 # In "Frontend" folder
 docker build -t pokedex-fe .
@@ -48,12 +56,12 @@ docker run -p 8080:80 pokedex-fe
 docker build -t pokedex-be .
 docker run -p 5000:5000 pokedex-be
 
-# Note: Change the port accordingly to your empty port(s).
+# Note: Sesuaikan portnya dengan port yang tersedia pada perangkat Anda.
 ```
 
-Keep in mind that:
-- Frontend runs on http://localhost:8080/ or http://127.0.0.1:8080/
-- Backend runs on http://localhost:5000/ or http://127.0.0.1:5000/
+Perlu diingat bahwa:
+- Frontend menggunakan http://localhost:8080/ atau http://127.0.0.1:8080/
+- Backend menggunakan http://localhost:5000/ atau http://127.0.0.1:5000/
 
 
 ## Screenshots
@@ -82,7 +90,7 @@ Contoh output pada salah satu metode get pokemon:
 #### Login
 ![picture 5](https://i.imgur.com/ZpkaJs5.png) 
 
-> If the user is trying to forcibly access other routes other than login/register page by typing in their search bar without logging in, they will be kicked back to the login page.
+> Ketika pengguna berusaha mengakses paksa route lainnya selain halaman login/register melalui URL tanpa login, mereka akan dibawa kembali ke halaman login
 
 #### Register
 ![picture 6](https://i.imgur.com/NSLskI7.png)  
@@ -100,11 +108,10 @@ Contoh output pada salah satu metode get pokemon:
 ### Pokemon Statistics
 ![picture 4](https://i.imgur.com/pAahGPQ.png)  
 
-> Keep in mind that the Chart is **scalable**. Whenever we add a pokemon in the Inventory page, its type will be added to this chart. If the type is a new type, then create a new "stick" or class interval.
-
+> Perlu diingat bahwa grafik bersifat **scalable**. Ketika kita menambahkan Pokemon baru pada halaman Inventory, tipenya akan bertambah ke grafiknya. Ketika tipenya merupakan tipe baru, akan terbentuk "batang" baru atau class interval. 
 
 ## Credits
 This project was made by:
-- Bonifasius Raditya Pandu Hendrianto (2306242350)
-- Jonathan Frederick Kosasih (2306225981)
-- Wesley Frederick Oh (2306202763)
+- Bonifasius Raditya Pandu Hendrianto (2306242350): Project setup, frontend development.
+- Jonathan Frederick Kosasih (2306225981): Concept, description, frontend finishing and dockerizing.
+- Wesley Frederick Oh (2306202763): Backend development and dockerizing, FE & BE integration, README
